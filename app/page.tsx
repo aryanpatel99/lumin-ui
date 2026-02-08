@@ -11,8 +11,8 @@ export default function Home() {
         <ModeToggle />
       </div>
       <div className="w-full max-w-xl perspective-distant">
-        <CardSkeleton />
-        {/* <Integration /> */}
+        {/* <CardSkeleton /> */}
+        <Integration />
       </div>
     </main>
   )
