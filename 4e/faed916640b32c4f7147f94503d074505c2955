@@ -1,0 +1,46 @@
+components/ui/types.ts
+  ai_agent 1-30
+components/ui/button.tsx
+  ai_agent 1-64
+components/ui/arrow-narrow-right-icon.tsx
+  ai_agent 1-71
+app/components/landingPage/launchPage.tsx
+  ai_agent 1-75
+package-lock.json
+  ai_agent 15,5199-5201,5204,6559-6561,6564,6585-6587
+package.json
+  ai_agent 16
+app/components/Cards/card.tsx
+  ai_agent 33
+app/layout.tsx
+  s_ba097e66d212b9::t_9dc173a0193f42 27
+app/components/mode-toggle.tsx
+  s_ba097e66d212b9::t_0671a4d8a3ee76 13,16
+app/components/ButtonsComponents/animatedButton.tsx
+  ai_agent 1-29
+app/page.tsx
+  h_ccbfe03d15f891 19-21
+components/ui/phone-volume.tsx
+  ai_agent 1-106
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "4efaed916640b32c4f7147f94503d074505c2955",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_ba097e66d212b9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "05c7e042-cea2-4f8c-abdf-b3fae5cf7bfd",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
