@@ -1,7 +1,7 @@
 "use client"
 import { cn } from '@/lib/utils'
 import React from 'react'
-import { ChatGpt, GoogleSheet2, InstagramIcon, LogoIcon, MetaIcon } from '../icons'
+import { ChatGpt, GoogleSheet2, InstagramIcon, LogoIcon, MetaIcon } from '@/app/icons'
 import { motion } from 'motion/react'
 
 
@@ -11,7 +11,7 @@ export default function Integration() {
       style={{
         transform: "rotateY(20deg) rotateX(20deg)"
       }}
-      className='relative flex justify-center items-center '>
+      className='relative flex justify-center items-center w-full h-full'>
 
       <Circle delay={0.6} className=" shadow-sm border-neutral-200/50 dark:border-neutral-700 size-120 z-6 bg-neutral-100/20 dark:bg-neutral-800/20" />
       <Circle delay={0.45} className=" shadow-sm border-neutral-200/50 dark:border-neutral-700 size-100 z-7 bg-neutral-100/30 dark:bg-neutral-800/40" />

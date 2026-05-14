@@ -1,26 +1,123 @@
 "use client"
-import AnimatedButton from "./components/ButtonsComponents/animatedButton";
-import CardSkeleton from "./components/Cards/card";
-import { DottedGlowBackground } from "./components/dotted-glow-background";
-import Integration from "./components/intergation";
-import LaunchPage from "./components/landingPage/launchPage";
-import { ModeToggle } from "./components/mode-toggle";
+import { useState } from "react"
+import { ArrowRight, Moon, Sun } from "lucide-react"
+import Link from "next/link"
+import AnimatedButton from "@/registry/animated-button/animated-button"
+import CardSkeleton from "@/registry/card-stack/card-stack"
+import { DottedGlowBackground } from "@/registry/dotted-background/dotted-background"
+import Integration from "@/registry/integration/integration"
+import LaunchPage from "@/registry/launch-page/launch-page"
+import { ModeToggle } from "./components/mode-toggle"
+import Pricing from "@/registry/pricing/pricing-01"
 
-export default function Home() {
-
+function PreviewScale({ scale, children }: { scale: number; children: React.ReactNode }) {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen relative">
-      <div className="absolute top-4 right-4">
-        <ModeToggle />
+    <div className="absolute inset-0 overflow-hidden">
+      <div style={{
+        transform: `scale(${scale})`,
+        transformOrigin: 'top left',
+        width: `${100 / scale}%`,
+        height: `${100 / scale}%`,
+      }}>
+        {children}
       </div>
-      {/* <div className="w-full max-w-xl perspective-distant"> */}
-      <div className="w-full perspective-distant">
-        <CardSkeleton />
-        {/* <Integration /> */}
-        {/* <LaunchPage/> */}
-        {/* <AnimatedButton /> */}
-      </div>
-    </main>
+    </div>
   )
 }
 
+function ComponentCard({ slug, name, children }: { slug: string; name: string; children: React.ReactNode }) {
+  const [isDark, setIsDark] = useState(false)
+
+  return (
+    <div className="border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden flex flex-col">
+      <div className={isDark ? "dark" : ""}>
+        <div className="bg-neutral-50 dark:bg-neutral-900 h-[280px] overflow-hidden relative">
+          {children}
+        </div>
+      </div>
+      <div className="flex items-center justify-between px-4 py-3 bg-background border-t border-neutral-200 dark:border-neutral-800">
+        <span className="text-sm font-medium text-neutral-800 dark:text-neutral-200">{name}</span>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setIsDark(!isDark)}
+            className="p-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            aria-label="Toggle component theme"
+          >
+            {isDark
+              ? <Sun size={13} className="text-neutral-500" />
+              : <Moon size={13} className="text-neutral-500" />
+            }
+          </button>
+          <Link
+            href={`/components/${slug}`}
+            className="size-7 rounded-full border border-neutral-200 dark:border-neutral-700 flex items-center justify-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+          >
+            <ArrowRight size={12} className="text-neutral-500" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <nav className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
+        <span className="text-sm font-medium tracking-tight text-neutral-400">ui / kit</span>
+        <ModeToggle />
+      </nav>
+
+      <section className="text-center py-20 px-6">
+        <h1 className="text-5xl font-semibold tracking-tight mb-4">
+          Craft. Ship. Repeat.
+        </h1>
+        <p className="text-neutral-500 dark:text-neutral-400 text-lg leading-relaxed">
+          A growing collection of animated, accessible UI components
+          <br className="hidden sm:block" />
+          for modern React applications.
+        </p>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 pb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          <ComponentCard slug="animated-button" name="Animated Button">
+            <AnimatedButton />
+          </ComponentCard>
+
+          <ComponentCard slug="card-stack" name="Card Stack">
+            <PreviewScale scale={0.88}>
+              <CardSkeleton />
+            </PreviewScale>
+          </ComponentCard>
+
+          <ComponentCard slug="launch-page" name="Launch Page">
+            <PreviewScale scale={0.53}>
+              <div className="flex items-center justify-center w-full h-full">
+                <LaunchPage />
+              </div>
+            </PreviewScale>
+          </ComponentCard>
+
+          <ComponentCard slug="integration" name="Integration">
+            <PreviewScale scale={0.47}>
+              <Integration />
+            </PreviewScale>
+          </ComponentCard>
+
+          <ComponentCard slug="pricing" name="Pricing">
+            <PreviewScale scale={0.31}>
+              <Pricing />
+            </PreviewScale>
+          </ComponentCard>
+
+          <ComponentCard slug="dotted-background" name="Dotted Background">
+            <DottedGlowBackground />
+          </ComponentCard>
+
+        </div>
+      </section>
+    </div>
+  )
+}

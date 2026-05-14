@@ -1,3 +1,4 @@
+"use client"
 import { Button } from '@/components/ui/button'
 import React, { useEffect, useRef, useState } from 'react'
 import PhoneVolume from '@/components/ui/phone-volume'

@@ -2,7 +2,7 @@ import { motion } from "motion/react"
 const AnimatedButton = () => {
   return (
     <div 
-    className="perspective::[1000px] [transform_style:preserve-3d] h-screen w-full flex items-center justify-center"
+    className="perspective::[1000px] [transform_style:preserve-3d] h-full w-full flex items-center justify-center"
     style={{
         backgroundImage: `radial-gradient(circle at 0.5px 0.5px , rgba(6,182,212,0.2) 0.5px, transparent 0)`,
         backgroundSize: "8px 8px",
