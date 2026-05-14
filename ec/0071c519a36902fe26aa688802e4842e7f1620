@@ -1,0 +1,78 @@
+registry/card-stack/card-stack.tsx
+  s_6660955574a7f8::t_5b0686c6caca90 1-76
+app/page.tsx
+  s_6660955574a7f8::t_56627a737d6ea5 13-27
+  s_b7cc06c0180b5f::t_0314e588ad128e 2-3,10,29,32-36,38-50,55,57,59,63-83,86-87,93,101,107,113,116-117,119-123
+  s_6660955574a7f8::t_49a4d86f5e08e5 84,88,91,94,102,105,108,111,114,118
+  s_6660955574a7f8::t_bbe5124c0908e3 4
+  s_6660955574a7f8::t_aad59533293494 90,92,96-100,104,106,110,112
+  s_6660955574a7f8::t_ec5e3b266cefa2 85,89,95,103,109,115
+  s_6660955574a7f8::t_e6acaf6d748d4b 28,51-54,56
+  s_6660955574a7f8::t_542a2743293ebe 5-9,11
+registry/index.ts
+  s_6660955574a7f8::t_dbb793f35ce089 4-48
+app/components/layout.tsx
+  s_6660955574a7f8::t_a64c2867ad364d 1-32,34-38
+  s_6660955574a7f8::t_2a3280f942220b 33
+app/components/[slug]/component-page.tsx
+  s_6660955574a7f8::t_6bae165021e402 1-18,21-37,40-44,46-61,64,66,72-79,81,86-92,94-101,104-113
+  s_6660955574a7f8::t_5560828034d38c 19-20,38-39,45,62-63,65,67-71,80,82-85,93,102-103
+package.json
+  s_6660955574a7f8::t_7fa05e508ecc74 22
+registry/pricing/pricing-01.tsx
+  s_6660955574a7f8::t_5b0686c6caca90 1-199,201-237
+registry/animated-button/animated-button.tsx
+  s_6660955574a7f8::t_5b0686c6caca90 5
+.gitignore
+  s_6660955574a7f8::t_358e4ae57900f2 42-44
+components/ui/phone-volume.tsx
+  s_6660955574a7f8::t_779edb502dd4da 1
+app/components/sidebar-nav.tsx
+  s_6660955574a7f8::t_58363817dd8c74 1-38
+app/components/[slug]/page.tsx
+  s_6660955574a7f8::t_5eb0563e22a2ed 1-40
+registry/integration/integration.tsx
+  s_6660955574a7f8::t_5b0686c6caca90 14
+  s_6660955574a7f8::t_a72cd67d6756b3 4
+registry/client-registry.tsx
+  s_6660955574a7f8::t_9123f8c11b37b6 1-18
+app/components/page.tsx
+  s_6660955574a7f8::t_90e660d4775807 1-6
+registry/launch-page/launch-page.tsx
+  s_6660955574a7f8::t_a27c964a2220ab 1
+  s_6660955574a7f8::t_5b0686c6caca90 2-76
+components/ui/arrow-narrow-right-icon.tsx
+  s_6660955574a7f8::t_470ada53f5b52d 1
+registry/dotted-background/dotted-background.tsx
+  h_ccbfe03d15f891 45,307-308
+  s_6660955574a7f8::t_5b0686c6caca90 1-44,46-306
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "ec0071c519a36902fe26aa688802e4842e7f1620",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6660955574a7f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9f616038-df68-4164-8c86-d0495ffb2bc2",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    },
+    "s_b7cc06c0180b5f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7218b733-a76c-4138-8ac1-8d905d1c2ddb",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
