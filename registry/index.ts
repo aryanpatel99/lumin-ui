@@ -49,6 +49,13 @@ export const registry: RegistryEntry[] = [
     file: "registry/dotted-background/dotted-background.tsx",
     previewScale: 1,
   },
+  {
+    slug: "sliding-number",
+    name: "Sliding Number",
+    exportName: "SlidingNumber",
+    file: "registry/sliding-number/sliding-number.tsx",
+    previewScale: 1,
+  },
 ]
 
 export function getEntry(slug: string): RegistryEntry | undefined {

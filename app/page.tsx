@@ -1,6 +1,4 @@
-"use client"
-import { useState } from "react"
-import { ArrowRight, Moon, Sun } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import AnimatedButton from "@/registry/animated-button/animated-button"
 import CardSkeleton from "@/registry/card-stack/card-stack"
@@ -26,35 +24,19 @@ function PreviewScale({ scale, children }: { scale: number; children: React.Reac
 }
 
 function ComponentCard({ slug, name, children }: { slug: string; name: string; children: React.ReactNode }) {
-  const [isDark, setIsDark] = useState(false)
-
   return (
     <div className="border border-neutral-200 dark:border-neutral-800 rounded-2xl overflow-hidden flex flex-col">
-      <div className={isDark ? "dark" : ""}>
-        <div className="bg-neutral-50 dark:bg-neutral-900 h-[280px] overflow-hidden relative">
-          {children}
-        </div>
+      <div className="bg-neutral-50 dark:bg-neutral-900 h-[280px] overflow-hidden relative">
+        {children}
       </div>
       <div className="flex items-center justify-between px-4 py-3 bg-background border-t border-neutral-200 dark:border-neutral-800">
         <span className="text-sm font-medium text-neutral-800 dark:text-neutral-200">{name}</span>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setIsDark(!isDark)}
-            className="p-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-            aria-label="Toggle component theme"
-          >
-            {isDark
-              ? <Sun size={13} className="text-neutral-500" />
-              : <Moon size={13} className="text-neutral-500" />
-            }
-          </button>
-          <Link
-            href={`/components/${slug}`}
-            className="size-7 rounded-full border border-neutral-200 dark:border-neutral-700 flex items-center justify-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-          >
-            <ArrowRight size={12} className="text-neutral-500" />
-          </Link>
-        </div>
+        <Link
+          href={`/components/${slug}`}
+          className="size-7 rounded-full border border-neutral-200 dark:border-neutral-700 flex items-center justify-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        >
+          <ArrowRight size={12} className="text-neutral-500" />
+        </Link>
       </div>
     </div>
   )
@@ -64,7 +46,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <nav className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
-        <span className="text-sm font-medium tracking-tight text-neutral-400">ui / kit</span>
+        <span className="text-md font-medium tracking-tight text-neutral-400">Lumin UI</span>
         <ModeToggle />
       </nav>
 

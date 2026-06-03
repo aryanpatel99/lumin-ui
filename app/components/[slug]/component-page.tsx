@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Copy, Moon, Sun } from "lucide-react"
+import { Check, Copy, Expand, Moon, Sun } from "lucide-react"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { clientComponents } from "@/registry/client-registry"
 import { ModeToggle } from "@/app/components/mode-toggle"
@@ -60,7 +61,7 @@ export default function ComponentPage({ slug, name, rawCode, highlightedCode, hi
       </div>
 
       {/* Panel */}
-      <div className="border border-t-0 border-neutral-200 dark:border-neutral-800 rounded-b-xl overflow-hidden">
+      <div className="border border-t-lg rounded-t-lg border-neutral-200 dark:border-neutral-800 rounded-b-lg overflow-hidden mt-2">
 
         {/* Preview — fixed height so h-full works inside components */}
         {tab === "preview" && (
@@ -69,16 +70,15 @@ export default function ComponentPage({ slug, name, rawCode, highlightedCode, hi
               className="bg-neutral-50 dark:bg-neutral-900 relative overflow-auto"
               style={{ height: PREVIEW_HEIGHT }}
             >
-              <div className="absolute top-3 right-3 z-10">
-                <button
-                  onClick={() => setIsDark(!isDark)}
+              <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5">
+                <Link
+                  href={`/preview/${slug}`}
+                  target="_blank"
                   className="p-1.5 rounded-full bg-background border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-                  aria-label="Toggle component theme"
+                  aria-label="Open fullscreen"
                 >
-                  {isDark
-                    ? <Sun size={13} className="text-neutral-500" />
-                    : <Moon size={13} className="text-neutral-500" />}
-                </button>
+                  <Expand size={13} className="text-neutral-500" />
+                </Link>
               </div>
               {/* Wrapper fills the container — components using h-full get PREVIEW_HEIGHT */}
               <div className="w-full h-full">
@@ -90,7 +90,7 @@ export default function ComponentPage({ slug, name, rawCode, highlightedCode, hi
 
         {/* Code / Usage */}
         {(tab === "code" || tab === "usage") && (
-          <div className="relative bg-[#0d1117]" style={{ minHeight: PREVIEW_HEIGHT }}>
+          <div className="relative bg-[#111]" style={{ minHeight: PREVIEW_HEIGHT }}>
             <button
               onClick={handleCopy}
               className="absolute top-3 right-3 z-10 flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs bg-neutral-700/60 hover:bg-neutral-700 text-neutral-300 transition-colors"
