@@ -168,7 +168,7 @@ const MainCard = ({ card }: { card: CardData }) => (
     <div className="bg-background rounded-2xl p-6 flex flex-col gap-4 flex-1 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800">
         <div className="flex items-center justify-between">
             <p className="text-sm text-neutral-500">{card.title}</p>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 border border-neutral-200/20 dark:border-neutral-700 rounded-full px-2 py-1.5 w-fit shadow-sm">
                 <span
                     className={cn(
                         'w-2 h-2 rounded-full',
