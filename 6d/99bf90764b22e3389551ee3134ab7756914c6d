@@ -1,0 +1,57 @@
+package.json
+  s_6660955574a7f8::t_7b49c4d13574e6 23
+registry/pricing/pricing-01.tsx
+  s_6660955574a7f8::t_6ece21b8f17dca 111
+  s_6660955574a7f8::t_49bbecae2f2696 6,13-14
+  s_6660955574a7f8::t_3766aa5c5d84da 183-186
+  s_6660955574a7f8::t_f9577a57b55d27 54,56-61,73,75-80,92,94-99
+  s_6660955574a7f8::t_f73ce8325899fc 207-209
+  s_6660955574a7f8::t_c4bf3f5e4be92c 220
+  s_6660955574a7f8::t_31cda2ae73e8e7 124-125
+  s_6660955574a7f8::t_4974051762d21a 34-35
+  h_ccbfe03d15f891 126-138,168,204
+registry/client-registry.tsx
+  s_6660955574a7f8::t_875a91ec56d619 11-14,16-24,27
+  s_6660955574a7f8::t_b63f424139a629 10,15,25-26,28-30,39
+app/preview/[slug]/page.tsx
+  s_6660955574a7f8::t_11721ef0b8de8a 1-5,7-14,19-22
+  s_6660955574a7f8::t_e8da67027d2669 6,16-18
+  s_6660955574a7f8::t_440fb81f2ac262 15
+app/components/[slug]/component-page.tsx
+  s_6660955574a7f8::t_2b208dd41bc4ff 4-5
+  s_6660955574a7f8::t_d63647fbe406d4 73-76,78,80-81
+  h_ccbfe03d15f891 64,93
+registry/sliding-number/sliding-number.tsx
+  s_6660955574a7f8::t_52ba6341555540 37,40,44,57,64-65,69-71
+  s_6660955574a7f8::t_8347629a9a84a1 1-36,39,41-43,45-56,58-63,66-68,72-173
+  s_6660955574a7f8::t_c62e81b07745b2 38
+registry/index.ts
+  s_6660955574a7f8::t_ae4a31ac45356c 52-58
+registry/animated-button/animated-button.tsx
+  s_6660955574a7f8::t_a301a31ba9137e 1-2
+app/page.tsx
+  s_6660955574a7f8::t_26e660b823971e 1
+  s_6660955574a7f8::t_d80065fc2e6dfe 29-30,34-39
+  h_ccbfe03d15f891 49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "6d99bf90764b22e3389551ee3134ab7756914c6d",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6660955574a7f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9f616038-df68-4164-8c86-d0495ffb2bc2",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
