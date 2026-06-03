@@ -1,0 +1,14 @@
+registry/pricing/pricing-01.tsx
+  h_ccbfe03d15f891 171
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "d4d5eb41aac6d321446bd2ff128917b1bd68391c",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
