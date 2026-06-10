@@ -6,6 +6,7 @@ import { DottedGlowBackground } from "@/registry/dotted-background/dotted-backgr
 import Integration from "@/registry/integration/integration"
 import LaunchPage from "@/registry/launch-page/launch-page"
 import { ModeToggle } from "./components/mode-toggle"
+import { GitHubIcon } from "./icons"
 import Pricing from "@/registry/pricing/pricing-01"
 import ContentCard from "@/registry/content-card/content-card"
 
@@ -48,7 +49,18 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <nav className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
         <span className="text-md font-medium tracking-tight text-neutral-800 dark:text-neutral-400">Lumin UI</span>
-        <ModeToggle />
+        <div className="flex items-center gap-2">
+          <a
+            href="https://github.com/aryanpatel99/lumin-ui"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View Lumin UI on GitHub"
+            className="size-9 rounded-md flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+          >
+            <GitHubIcon className="size-5" />
+          </a>
+          <ModeToggle />
+        </div>
       </nav>
 
       <section className="text-center py-20 px-6">
