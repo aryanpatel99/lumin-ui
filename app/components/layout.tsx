@@ -20,7 +20,7 @@ export default function ComponentsLayout({ children }: { children: React.ReactNo
         </div>
 
         <div className="px-4 pt-5 pb-2">
-          <p className="text-[11px] font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-600">
+          <p className="text-[11px] font-bold uppercase tracking-widest text-neutral-400 dark:text-neutral-600">
             Components
           </p>
         </div>

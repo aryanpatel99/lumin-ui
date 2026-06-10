@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Check, Copy, Expand, Moon, Sun } from "lucide-react"
+import { Check, Copy, Expand } from "lucide-react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { clientComponents } from "@/registry/client-registry"
@@ -22,7 +22,7 @@ const PREVIEW_HEIGHT = 600
 export default function ComponentPage({ slug, name, rawCode, highlightedCode, highlightedUsage }: Props) {
   const [tab, setTab] = useState<Tab>("preview")
   const [copied, setCopied] = useState(false)
-  const [isDark, setIsDark] = useState(false)
+  const [isDark] = useState(false)
 
   const Component = clientComponents[slug]
 
@@ -99,7 +99,7 @@ export default function ComponentPage({ slug, name, rawCode, highlightedCode, hi
               {copied ? "Copied" : "Copy"}
             </button>
             <div
-              className="overflow-auto p-4 text-sm [&>pre]:!bg-transparent [&>pre]:!p-0"
+              className="overflow-auto p-4 text-sm [&>pre]:bg-transparent! [&>pre]:p-0! [&>pre]:whitespace-pre-wrap! [&_code]:wrap-anywhere"
               style={{ maxHeight: PREVIEW_HEIGHT + 200 }}
               dangerouslySetInnerHTML={{
                 __html: tab === "code" ? highlightedCode : highlightedUsage,

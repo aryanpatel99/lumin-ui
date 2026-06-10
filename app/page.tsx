@@ -7,6 +7,7 @@ import Integration from "@/registry/integration/integration"
 import LaunchPage from "@/registry/launch-page/launch-page"
 import { ModeToggle } from "./components/mode-toggle"
 import Pricing from "@/registry/pricing/pricing-01"
+import ContentCard from "@/registry/content-card/content-card"
 
 function PreviewScale({ scale, children }: { scale: number; children: React.ReactNode }) {
   return (
@@ -96,6 +97,14 @@ export default function Home() {
 
           <ComponentCard slug="dotted-background" name="Dotted Background">
             <DottedGlowBackground />
+          </ComponentCard>
+
+          <ComponentCard slug="content-card" name="Content Card">
+            <PreviewScale scale={0.55}>
+              <div className="flex items-center justify-center w-full h-full">
+                <ContentCard />
+              </div>
+            </PreviewScale>
           </ComponentCard>
 
         </div>

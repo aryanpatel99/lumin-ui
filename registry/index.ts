@@ -56,6 +56,13 @@ export const registry: RegistryEntry[] = [
     file: "registry/sliding-number/sliding-number.tsx",
     previewScale: 1,
   },
+  {
+    slug: "content-card",
+    name: "Content Card",
+    exportName: "ContentCard",
+    file: "registry/content-card/content-card.tsx",
+    previewScale: 0.55,
+  },
 ]
 
 export function getEntry(slug: string): RegistryEntry | undefined {
