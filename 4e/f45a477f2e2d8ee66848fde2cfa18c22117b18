@@ -1,0 +1,48 @@
+app/components/[slug]/component-page.tsx
+  s_437098673be1be::t_6899b5f338b2ca 4
+  s_437098673be1be::t_a90e492ec5fe4c 102
+  s_437098673be1be::t_ff78b03f01ff24 25
+app/components/mode-toggle.tsx
+  h_ccbfe03d15f891 6
+app/scratch/page.tsx
+  h_ccbfe03d15f891 1-13
+app/page.tsx
+  s_437098673be1be::t_4f10105bbe599c 102-109
+  s_437098673be1be::t_a81bdfd6d6e325 10
+app/components/layout.tsx
+  h_ccbfe03d15f891 23
+registry/client-registry.tsx
+  s_437098673be1be::t_869f9e1286e5aa 11
+  s_437098673be1be::t_13f10bc19b4323 41
+registry/content-card/content-card.tsx
+  s_437098673be1be::t_67530868c98e88 7-8
+  h_ccbfe03d15f891 1-6,9-15,18-63,65-79,81-90,92-114,116-133
+  s_437098673be1be::t_4074759d1bea72 91
+  s_437098673be1be::t_4ce911b3d9d645 115
+  s_437098673be1be::t_e95a15d349849f 16-17
+  s_437098673be1be::t_bd519e09a561e5 64
+  s_437098673be1be::t_48e9dca6423264 80
+registry/index.ts
+  s_437098673be1be::t_0bbd0ef9ba0a5b 59-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "4ef45a477f2e2d8ee66848fde2cfa18c22117b18",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_437098673be1be": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "59f9d1df-1152-456d-bfce-0ff5f3d453a1",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
