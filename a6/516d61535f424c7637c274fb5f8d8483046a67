@@ -1,0 +1,26 @@
+README.md
+  s_437098673be1be::t_13a4d1565b89c1 1,3,5-27,29-56,59-66,70,101-118,120,122-124,126,128,130,132
+  s_437098673be1be::t_58966e70bfb820 72,74,76-100
+  s_437098673be1be::t_81dfa02c8ac674 28
+app/icons/index.tsx
+  s_437098673be1be::t_c7134ebe5d722f 81-86
+app/page.tsx
+  s_437098673be1be::t_9fbca1cb992280 9
+  s_437098673be1be::t_961f591f2253fd 52-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "a6516d61535f424c7637c274fb5f8d8483046a67",
+  "prompts": {},
+  "sessions": {
+    "s_437098673be1be": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "59f9d1df-1152-456d-bfce-0ff5f3d453a1",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
