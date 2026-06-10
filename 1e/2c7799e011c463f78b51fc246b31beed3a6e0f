@@ -1,0 +1,14 @@
+registry/content-card/content-card.tsx
+  h_ccbfe03d15f891 12,14,16-17,19-21,23,30,66-68,84,87,90
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "1e2c7799e011c463f78b51fc246b31beed3a6e0f",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
