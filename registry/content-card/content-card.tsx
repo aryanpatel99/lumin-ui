@@ -5,89 +5,89 @@ import { motion } from 'motion/react'
 const ContentCard = () => {
     return (
         <div className="w-full h-full flex items-center justify-center p-4">
-        <motion.div
-        initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
-        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={cn(`w-90 min-h-[30rem] h-[30rem] rounded-lg flex flex-col`,
-            "shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]",
-            "p-6 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
-        )}>
-            <h2 className="text-md font-bold">Connect your favorite tools</h2>
-            <p className="text-sm text-neutral-500 mt-2">Browse and integrate the apps your team already uses, all from one place.</p>
-
-            <div className="flex itemd-center justify-center">
-                <button className={cn("flex items-center gap-2 mt-4 px-4 py-2 rounded-md text-xs font-semibold border border-t-neutral-100 dark:border-neutral-800 dark:border-t-neutral-600 dark:border-b-neutral-900",
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className={cn(`w-90 min-h-[30rem] h-[30rem] rounded-lg flex flex-col`,
                     "shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]",
-                    
+                    "p-6 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
                 )}>
-                    <Logo />
-                    Lumin
-                </button>
-            </div>
+                <h2 className="text-md font-bold">Connect your favorite tools</h2>
+                <p className="text-sm text-neutral-500 mt-2">Browse and integrate the apps your team already uses, all from one place.</p>
+
+                <div className="flex itemd-center justify-center">
+                    <button className={cn("flex items-center gap-2 mt-4 px-4 py-2 rounded-md text-xs font-semibold border border-t-neutral-100 dark:border-neutral-800 dark:border-t-neutral-600 dark:border-b-neutral-900",
+                        "shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]",
+
+                    )}>
+                        <Logo />
+                        Lumin
+                    </button>
+                </div>
 
 
-            <div className={cn("bg-gray-100 dark:bg-neutral-800 flex-1 mt-4 rounded-lg border border-neutral-200 dark:border-dashed dark:border-neutral-700 relative",
-                "shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]"
-            )}>
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
-                    whileHover={{ scale: 1.02, filter: "blur(0px)", opacity: 1 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="absolute inset-0 h-full w-full divide-y divide-neutral-200 dark:divide-neutral-900 flex flex-col bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 ">
-                    <div className="px-4 py-3 flex gap-2">
-                        <div className={(cn("rounded-md p-1 size-10 flex items-center justify-center bg-white dark:bg-neutral-800",
-                            "shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
-                        ))}>
-                            <Icon1 />
+                <div className={cn("bg-gray-100 dark:bg-neutral-800 flex-1 mt-4 rounded-lg border border-neutral-200 dark:border-dashed dark:border-neutral-700 relative",
+                    "shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)]"
+                )}>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+                        whileHover={{ scale: 1.02, filter: "blur(0px)", opacity: 1 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="absolute inset-0 h-full w-full divide-y divide-neutral-200 dark:divide-neutral-900 flex flex-col bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 ">
+                        <div className="px-4 py-3 flex gap-2">
+                            <div className={(cn("rounded-md p-1 size-10 flex items-center justify-center bg-white dark:bg-neutral-800",
+                                "shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
+                            ))}>
+                                <Icon1 />
+                            </div>
+                            <div>
+                                <h3 className="text-xs font-semibold">Goil</h3>
+                                <p className="text-[0.625rem] text-neutral-500">Transform your business idea into a fully functional app in minutes</p>
+                            </div>
                         </div>
-                        <div>
-                            <h3 className="text-xs font-semibold">Goil</h3>
-                            <p className="text-[0.625rem] text-neutral-500">Transform your business idea into a fully functional app in minutes</p>
+                        <div className="px-4 py-3 flex gap-2">
+                            <div className={(cn("rounded-md p-1 size-10 flex items-center justify-center",
+                                "shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
+                            ))}>
+                                <Icon2 />
+                            </div>
+                            <div>
+                                <h3 className="text-xs font-semibold">1Password</h3>
+                                <p className="text-[0.625rem] text-neutral-500">Protect passwords and secrets, manage app access, and secure AI tools</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="px-4 py-3 flex gap-2">
-                        <div className={(cn("rounded-md p-1 size-10 flex items-center justify-center",
-                            "shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
-                        ))}>
-                            <Icon2 />
+                        <div className="px-4 py-3 flex gap-2">
+                            <div className={(cn("rounded-md p-1 size-10 flex items-center justify-center",
+                                "shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
+                            ))}>
+                                <Icon3 />
+                            </div>
+                            <div>
+                                <h3 className="text-xs font-semibold">Ahrefs</h3>
+                                <p className="text-[0.625rem] text-neutral-500">Ahrefs gives you the tools and data to grow your brand's traffic</p>
+                            </div>
                         </div>
-                        <div>
-                            <h3 className="text-xs font-semibold">1Password</h3>
-                            <p className="text-[0.625rem] text-neutral-500">Protect passwords and secrets, manage app access, and secure AI tools</p>
+                        <div className="px-4 py-3 flex gap-2">
+                            <div className={(cn("rounded-md p-1 size-10 flex items-center justify-center",
+                                "shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
+                            ))}>
+                                <Icon4 />
+                            </div>
+                            <div>
+                                <h3 className="text-xs font-semibold">Postmark</h3>
+                                <p className="text-[0.625rem] text-neutral-500">The email delivery service that people actually like
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="px-4 py-3 flex gap-2">
-                        <div className={(cn("rounded-md p-1 size-10 flex items-center justify-center",
-                            "shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
-                        ))}>
-                            <Icon3 />
-                        </div>
-                        <div>
-                            <h3 className="text-xs font-semibold">Ahrefs</h3>
-                            <p className="text-[0.625rem] text-neutral-500">Ahrefs gives you the tools and data to grow your brand's traffic</p>
-                        </div>
-                    </div>
-                    <div className="px-4 py-3 flex gap-2">
-                        <div className={(cn("rounded-md p-1 size-10 flex items-center justify-center",
-                            "shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
-                        ))}>
-                            <Icon4 />
-                        </div>
-                        <div>
-                            <h3 className="text-xs font-semibold">Postmark</h3>
-                            <p className="text-[0.625rem] text-neutral-500">The email delivery service that people actually like
-                            </p>
-                        </div>
-                    </div>
 
-                </motion.div>
-
-
-            </div>
+                    </motion.div>
 
 
-        </motion.div>
+                </div>
+
+
+            </motion.div>
         </div>
     )
 }
