@@ -1,0 +1,37 @@
+registry/dotted-background/dotted-background.tsx
+  s_437098673be1be::t_aafadcac818d95 268-269,271-283,297
+  s_437098673be1be::t_56421ded00d110 183-198
+  s_437098673be1be::t_ebddb4ec6b95ba 37-40
+  s_6660955574a7f8::t_5b0686c6caca90 270
+  s_437098673be1be::t_c573ea34a049bd 66-67
+  s_437098673be1be::t_3b8af7776d27c2 317-318,331-332
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "e8737f26f6718bfda342435da83d8b17775d38cb",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_437098673be1be": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "59f9d1df-1152-456d-bfce-0ff5f3d453a1",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    },
+    "s_6660955574a7f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9f616038-df68-4164-8c86-d0495ffb2bc2",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
