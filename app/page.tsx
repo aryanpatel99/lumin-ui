@@ -47,18 +47,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <nav className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
-        <span className="text-md font-medium tracking-tight text-neutral-400">Lumin UI</span>
+        <span className="text-md font-medium tracking-tight text-neutral-800 dark:text-neutral-400">Lumin UI</span>
         <ModeToggle />
       </nav>
 
       <section className="text-center py-20 px-6">
         <h1 className="text-5xl font-semibold tracking-tight mb-4">
-          Craft. Ship. Repeat.
+          Built to Be Seen. Designed to Be Used.
+          
         </h1>
         <p className="text-neutral-500 dark:text-neutral-400 text-lg leading-relaxed">
           A growing collection of animated, accessible UI components
           <br className="hidden sm:block" />
-          for modern React applications.
+          for modern applications.
         </p>
       </section>
 
