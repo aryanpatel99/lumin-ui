@@ -1,0 +1,16 @@
+app/page.tsx
+  h_ccbfe03d15f891 50,56-57,62
+app/components/layout.tsx
+  h_ccbfe03d15f891 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "27f89f480528842dc5346a7a402e79f8130d14e7",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
