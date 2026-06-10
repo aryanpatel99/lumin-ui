@@ -34,6 +34,10 @@ type DottedGlowBackgroundProps = {
   speedMax?: number;
   /** global speed multiplier for all dots */
   speedScale?: number;
+  /** enable pointer spotlight — dots near the cursor brighten and grow */
+  interactive?: boolean;
+  /** radius of the pointer's influence in CSS px */
+  hoverRadius?: number;
 };
 
 /**
@@ -59,6 +63,8 @@ export const DottedGlowBackground = ({
   speedMin = 0.4,
   speedMax = 1.3,
   speedScale = 1,
+  interactive = true,
+  hoverRadius = 140,
 }: DottedGlowBackgroundProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -174,6 +180,22 @@ export const DottedGlowBackground = ({
     ro.observe(container);
     resize();
 
+    // Pointer position in CSS px, relative to the container
+    const mouse = { x: 0, y: 0, active: false };
+    const handlePointerMove = (e: PointerEvent) => {
+      const rect = container.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+      mouse.active = true;
+    };
+    const handlePointerLeave = () => {
+      mouse.active = false;
+    };
+    if (interactive) {
+      container.addEventListener("pointermove", handlePointerMove);
+      container.addEventListener("pointerleave", handlePointerLeave);
+    }
+
     // Precompute dot metadata for a medium-sized grid and regenerate on resize
     let dots: { x: number; y: number; phase: number; speed: number }[] = [];
 
@@ -243,7 +265,22 @@ export const DottedGlowBackground = ({
         // Linear triangle wave 0..1..0 for linear glow/dim
         const mod = (time * d.speed + d.phase) % 2;
         const lin = mod < 1 ? mod : 2 - mod; // 0..1..0
-        const a = 0.25 + 0.55 * lin; // 0.25..0.8 linearly
+        let a = 0.25 + 0.55 * lin; // 0.25..0.8 linearly
+        let r = radius;
+
+        // Pointer spotlight: dots near the cursor brighten and grow,
+        // with a smooth quadratic falloff out to hoverRadius.
+        if (interactive && mouse.active) {
+          const dx = d.x - mouse.x;
+          const dy = d.y - mouse.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < hoverRadius) {
+            let boost = 1 - dist / hoverRadius; // 1 at cursor, 0 at edge
+            boost *= boost; // ease the falloff
+            a = Math.min(1, a + boost * 0.9);
+            r = radius * (1 + boost * 0.9);
+          }
+        }
 
         // draw glow when bright
         if (a > 0.6) {
@@ -257,7 +294,7 @@ export const DottedGlowBackground = ({
 
         ctx.globalAlpha = a * opacity;
         ctx.beginPath();
-        ctx.arc(d.x, d.y, radius, 0, Math.PI * 2);
+        ctx.arc(d.x, d.y, r, 0, Math.PI * 2);
         ctx.fill();
       }
       ctx.restore();
@@ -277,6 +314,8 @@ export const DottedGlowBackground = ({
       stopped = true;
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", handleResize);
+      container.removeEventListener("pointermove", handlePointerMove);
+      container.removeEventListener("pointerleave", handlePointerLeave);
       ro.disconnect();
     };
   }, [
@@ -289,6 +328,8 @@ export const DottedGlowBackground = ({
     speedMin,
     speedMax,
     speedScale,
+    interactive,
+    hoverRadius,
   ]);
 
   return (
