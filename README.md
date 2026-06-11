@@ -14,21 +14,21 @@ A growing collection of **animated, accessible UI components** for modern React 
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Motion](https://img.shields.io/badge/Motion-React-FF0080?style=for-the-badge&logo=framer&logoColor=white)](https://motion.dev)
 
-[**Live Demo**](http://localhost:3000) · [**Components**](#-components) · [**Getting Started**](#-getting-started)
+[**Live Demo**](https://luminui.vercel.app/) · [**Components**](#-components) · [**Getting Started**](#-getting-started)
 
 </div>
 
 ---
 
-## ✨ Features
+## Features
 
-- 🎬 **Animated by default** — every component ships with thoughtful motion via `motion/react`
-- 🌗 **Dark mode** — global theme toggle plus per-component preview switching
-- ♿ **Accessible** — built on top of shadcn/ui primitives
-- 📋 **Copy & paste** — no install step; grab the source straight from the gallery
-- ⚡ **Modern stack** — Next.js App Router, React 19, Tailwind CSS v4
+- **Animated by default** — every component ships with thoughtful motion via `motion/react`
+- **Dark mode** — global theme toggle plus per-component preview switching
+- **Accessible** — built on top of shadcn/ui primitives
+- **Copy & paste** — no install step; grab the source straight from the gallery
+- **Modern stack** — Next.js App Router, React 19, Tailwind CSS v4
 
-## 🧱 Tech Stack
+## Tech Stack
 
 | Layer        | Choice                                  |
 | ------------ | --------------------------------------- |
@@ -40,7 +40,7 @@ A growing collection of **animated, accessible UI components** for modern React 
 | Icons        | `@tabler/icons-react` + custom SVGs     |
 | Theming      | `next-themes`                           |
 
-## 🧩 Components
+## Components
 
 | Component          | Description                                          |
 | ------------------ | ---------------------------------------------------- |
@@ -53,7 +53,7 @@ A growing collection of **animated, accessible UI components** for modern React 
 | Sliding Number     | Animated number transitions with digit rolling       |
 | Content Card       | Content card with an animated integrations list      |
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
 # 1. Clone the repository
@@ -69,7 +69,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the component gallery.
 
-## 📋 Using a Component
+## Using a Component
 
 > **Note:** Lumin UI is **copy & paste** — there's no `npm` package or CLI yet.
 
@@ -96,9 +96,9 @@ export function cn(...inputs: ClassValue[]) {
 
 That's it — the component is yours to edit.
 
-> 💡 A `npx` CLI installer (shadcn-style) is on the roadmap.
+> A `npx` CLI installer (shadcn-style) is on the roadmap.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 registry/                 # All showcase components live here
@@ -117,7 +117,7 @@ lib/utils.ts               # cn() helper
 providers/                 # Theme provider
 ```
 
-## ➕ Adding a Component
+## Adding a Component
 
 1. Create `registry/<name>/<name>.tsx` (kebab-case, `@/` imports only)
 2. Register it in `registry/index.ts` and `registry/client-registry.tsx`
