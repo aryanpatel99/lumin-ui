@@ -1,0 +1,25 @@
+README.md
+  s_fb77559ebbb7ed::t_5c4fd68c06732f 23,25-29,31
+  s_fb77559ebbb7ed::t_cc488295826b11 17
+  s_fb77559ebbb7ed::t_de8fb7e3e60bc8 43
+  s_fb77559ebbb7ed::t_a6a7cd7ad78972 99,101
+  s_fb77559ebbb7ed::t_3ed0a8f39b74a9 56
+  s_fb77559ebbb7ed::t_7ad6e3b5aa8c40 72
+  s_fb77559ebbb7ed::t_a96f3c600c4730 120
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "f92ecc0db07078516494ced8324357dfcd3e883a",
+  "prompts": {},
+  "sessions": {
+    "s_fb77559ebbb7ed": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "518b618d-db58-46c9-98f2-bfa1c862d464",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
