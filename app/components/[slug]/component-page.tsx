@@ -81,7 +81,7 @@ export default function ComponentPage({ slug, name, rawCode, highlightedCode, hi
                 </Link>
               </div>
               {/* Wrapper fills the container — components using h-full get PREVIEW_HEIGHT */}
-              <div className="w-full h-full">
+              <div className="w-full h-full flex items-center justify-center">
                 {Component && <Component />}
               </div>
             </div>

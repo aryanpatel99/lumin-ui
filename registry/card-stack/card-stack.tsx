@@ -30,7 +30,7 @@ export default function CardSkeleton() {
     return (
         <div style={{
             transform: "rotateX(-10deg) rotateY(20deg) translateZ(30px)"
-        }} className='relative h-75 mask-radial-from-50% max-w-xl mx-auto perspective-distant  mask-r-from-50%'>
+        }} className='relative h-75 w-full mask-radial-from-50% max-w-xl mx-auto perspective-distant  mask-r-from-50%'>
             <Card className='absolute bottom-23 left-8 w-full hover:-translate-y-10' icon={<IconSparkles className='text-white' />} title={cards[1].title} description={cards[1].description} date={cards[1].date} />
             <Card className='absolute bottom-12 left-20 w-full hover:-translate-y-10' icon={<IconSparkles className='text-white' />} title={cards[2].title} description={cards[2].description} date={cards[2].date} />
             <Card active className='absolute bottom-0 left-32 w-full hover:-translate-y-10' icon={<IconSparkles className='text-white' />} title={cards[0].title} description={cards[0].description} date={cards[0].date} />

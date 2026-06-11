@@ -9,6 +9,7 @@ import { ModeToggle } from "./components/mode-toggle"
 import { GitHubIcon } from "./icons"
 import Pricing from "@/registry/pricing/pricing-01"
 import ContentCard from "@/registry/content-card/content-card"
+import DisclosureCard from "@/registry/disclosure-card/disclosure-card"
 
 function PreviewScale({ scale, children }: { scale: number; children: React.ReactNode }) {
   return (
@@ -116,6 +117,14 @@ export default function Home() {
             <PreviewScale scale={0.55}>
               <div className="flex items-center justify-center w-full h-full">
                 <ContentCard />
+              </div>
+            </PreviewScale>
+          </ComponentCard>
+
+          <ComponentCard slug="disclosure-card" name="Disclosure Card">
+            <PreviewScale scale={0.65}>
+              <div className="flex items-center justify-center w-full h-full">
+                <DisclosureCard />
               </div>
             </PreviewScale>
           </ComponentCard>

@@ -9,6 +9,7 @@ import Pricing from "./pricing/pricing-01"
 import { DottedGlowBackground } from "./dotted-background/dotted-background"
 import { SlidingNumber } from "./sliding-number/sliding-number"
 import ContentCard from "./content-card/content-card"
+import DisclosureCard from "./disclosure-card/disclosure-card"
 import { useEffect, useState } from "react"
 
 const DEMO_VALUES = [0, 1234, 56789, 999, 42000, 7500]
@@ -39,4 +40,5 @@ export const clientComponents: Record<string, ComponentType> = {
   "dotted-background": DottedGlowBackground,
   "sliding-number": SlidingNumberPreview,
   "content-card": ContentCard,
+  "disclosure-card": DisclosureCard,
 }

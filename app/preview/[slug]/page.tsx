@@ -12,7 +12,7 @@ export default function PreviewPage({ params }: { params: Promise<{ slug: string
   if (!Component) notFound()
 
   return (
-    <div className="relative w-full h-screen overflow-auto">
+    <div className="relative w-full h-screen overflow-auto flex items-center justify-center">
       <div className="fixed top-4 right-4 z-50 rounded-full border border-neutral-200 dark:border-neutral-800 bg-background/80 backdrop-blur">
         <ModeToggle />
       </div>
