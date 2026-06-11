@@ -1,0 +1,45 @@
+registry/index.ts
+  s_9a8ccdff11fe7a::t_2a03465469778a 66-72
+app/preview/[slug]/page.tsx
+  s_9a8ccdff11fe7a::t_e888b3c8ef8905 15
+registry/disclosure-card/disclosureCard.tsx
+  h_ccbfe03d15f891 1-9
+registry/card-stack/card-stack.tsx
+  s_9a8ccdff11fe7a::t_8e9bf8b8fe27a5 33
+registry/client-registry.tsx
+  s_9a8ccdff11fe7a::t_40660793273359 12
+  s_9a8ccdff11fe7a::t_68ea13ae0560d4 43
+registry/disclosure-card/disclosure-card.tsx
+  s_9a8ccdff11fe7a::t_c338058d35b147 17-23,28
+  s_9a8ccdff11fe7a::t_12452be73f951d 27
+  s_9a8ccdff11fe7a::t_0f7c83e12eb092 1-6,9,26,29-32
+  s_9a8ccdff11fe7a::t_8b91df564e1a25 7-8
+app/components/[slug]/component-page.tsx
+  s_9a8ccdff11fe7a::t_bef8cb66e8d566 84
+app/page.tsx
+  s_9a8ccdff11fe7a::t_52082e4d76524b 124-131
+  s_9a8ccdff11fe7a::t_ff24f48162ff1d 12
+app/scratch/page.tsx
+  s_9a8ccdff11fe7a::t_b6141de1062a41 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "420673ea2bb7601d465288a95be1bc3c140da605",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_9a8ccdff11fe7a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "15473c56-fe20-4740-9aa5-8959f17585d7",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
