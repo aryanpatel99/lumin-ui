@@ -13,6 +13,7 @@ export interface RegistryEntry {
   usage?: string
   npmDependencies: string[]
   registryDependencies?: string[]
+  hidden?: boolean
 }
 
 export const registry: RegistryEntry[] = [
@@ -25,6 +26,7 @@ export const registry: RegistryEntry[] = [
     category: "components",
     previewScale: 1,
     npmDependencies: [],
+    hidden: true,
   },
   {
     slug: "arrow-narrow-right-icon",
@@ -36,6 +38,7 @@ export const registry: RegistryEntry[] = [
     previewScale: 1,
     npmDependencies: ["motion"],
     registryDependencies: ["animated-icon-types"],
+    hidden: true,
   },
   {
     slug: "phone-volume",
@@ -47,6 +50,7 @@ export const registry: RegistryEntry[] = [
     previewScale: 1,
     npmDependencies: ["motion"],
     registryDependencies: ["animated-icon-types"],
+    hidden: true,
   },
   {
     slug: "animated-button",
