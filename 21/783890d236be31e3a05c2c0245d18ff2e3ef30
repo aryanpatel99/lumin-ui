@@ -1,0 +1,30 @@
+app/components/page.tsx
+  s_9a2ca37ae0f025::t_4c60df499737de 78
+  s_9a2ca37ae0f025::t_2482e9cc1a39af 21-22,25
+app/components/layout.tsx
+  s_9a2ca37ae0f025::t_9797d2258b86c8 7
+registry/index.ts
+  s_9a2ca37ae0f025::t_cb2ab9450e0fe6 29,41,53
+  s_9a2ca37ae0f025::t_eb8a514edc9732 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "21783890d236be31e3a05c2c0245d18ff2e3ef30",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_9a2ca37ae0f025": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b888f657-6694-424c-86fc-5902b4790e78",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
