@@ -1,0 +1,63 @@
+registry/content-card/content-card.tsx
+  s_9a2ca37ae0f025::t_127f10b98c0647 3
+registry/dashboard-cards/dashboard-cards.tsx
+  s_9a2ca37ae0f025::t_83deeeb1145905 2
+registry/sliding-number/sliding-number.tsx
+  s_9a2ca37ae0f025::t_8db6e2c672a73d 12
+registry/index.ts
+  s_9a2ca37ae0f025::t_87882dd0436574 8,15
+  s_9a2ca37ae0f025::t_c48f2099601118 146
+  s_9a2ca37ae0f025::t_cbb226e3ca7e71 14,58,67,76,85,94-95,114-115,136,145,155,164,175,184-185
+  s_9a2ca37ae0f025::t_3efa11e56fa6f5 20-50
+registry/integration/integration.tsx
+  s_9a2ca37ae0f025::t_dfa2e2f62b15ea 2
+registry/card-stack/card-stack.tsx
+  s_9a2ca37ae0f025::t_a3bb74c56a738e 2
+app/components/[slug]/component-page.tsx
+  s_9a2ca37ae0f025::t_2aa4b71edd2501 11,18,21-22,28,37,39,46-50,53,64-65,67-68,93,95-107,112,123,128-224
+registry/pricing/pricing-01.tsx
+  s_9a2ca37ae0f025::t_2e369a929e97ad 5
+registry/launch-page/launch-page.tsx
+  s_9a2ca37ae0f025::t_2299781d8c7b8e 8,32,36-38,50,58-59,65-66,71-73
+  s_6660955574a7f8::t_5b0686c6caca90 60
+app/r/[slug]/route.ts
+  s_9a2ca37ae0f025::t_a96c3a13271587 26
+  s_9a2ca37ae0f025::t_0fb5d7643361cf 6,14-21,27,30
+registry/concentric-progress/concentric-progress.tsx
+  s_9a2ca37ae0f025::t_19355d4ea0e257 3
+registry/progress-row/progress-row.tsx
+  s_9a2ca37ae0f025::t_1c6065c608055e 3
+registry/disclosure-card/disclosure-card.tsx
+  s_9a2ca37ae0f025::t_3391499ae057cb 2
+app/components/[slug]/page.tsx
+  s_9a2ca37ae0f025::t_f2d7d7bf251e1e 8-14,20-21,25,28,31,42-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.7",
+  "base_commit_sha": "3f36158e87f2c3299cb76de93a513244dd137ecf",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6660955574a7f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9f616038-df68-4164-8c86-d0495ffb2bc2",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    },
+    "s_9a2ca37ae0f025": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b888f657-6694-424c-86fc-5902b4790e78",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
