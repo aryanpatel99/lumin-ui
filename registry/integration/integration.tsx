@@ -1,7 +1,5 @@
 "use client"
-import { clsx, type ClassValue } from 'clsx'
-import { twMerge } from 'tailwind-merge'
-function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)) }
+import { cn } from '@/lib/utils'
 import React from 'react'
 import { ChatGpt, GoogleSheet2, InstagramIcon, LogoIcon, MetaIcon } from '@/app/icons'
 import { motion } from 'motion/react'

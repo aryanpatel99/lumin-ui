@@ -1,7 +1,5 @@
 "use client"
-import { clsx, type ClassValue } from 'clsx'
-import { twMerge } from 'tailwind-merge'
-function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)) }
+import { cn } from '@/lib/utils'
 import { ArrowUpRight, ChevronDown } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { SlidingNumber } from '../sliding-number/sliding-number'

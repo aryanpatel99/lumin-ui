@@ -5,14 +5,49 @@ export interface RegistryEntry {
   name: string
   exportName: string
   file: string
+  installPath?: string
   category: RegistryCategory
   previewScale: number
   previewHeight?: number
   previewPadding?: number
   usage?: string
+  npmDependencies: string[]
+  registryDependencies?: string[]
 }
 
 export const registry: RegistryEntry[] = [
+  {
+    slug: "animated-icon-types",
+    name: "Animated Icon Types",
+    exportName: "AnimatedIconHandle",
+    file: "components/ui/types.ts",
+    installPath: "components/ui/types.ts",
+    category: "components",
+    previewScale: 1,
+    npmDependencies: [],
+  },
+  {
+    slug: "arrow-narrow-right-icon",
+    name: "Arrow Narrow Right Icon",
+    exportName: "ArrowNarrowRightIcon",
+    file: "components/ui/arrow-narrow-right-icon.tsx",
+    installPath: "components/ui/arrow-narrow-right-icon.tsx",
+    category: "components",
+    previewScale: 1,
+    npmDependencies: ["motion"],
+    registryDependencies: ["animated-icon-types"],
+  },
+  {
+    slug: "phone-volume",
+    name: "Phone Volume Icon",
+    exportName: "PhoneVolume",
+    file: "components/ui/phone-volume.tsx",
+    installPath: "components/ui/phone-volume.tsx",
+    category: "components",
+    previewScale: 1,
+    npmDependencies: ["motion"],
+    registryDependencies: ["animated-icon-types"],
+  },
   {
     slug: "animated-button",
     name: "Animated Button",
@@ -20,6 +55,7 @@ export const registry: RegistryEntry[] = [
     file: "registry/animated-button/animated-button.tsx",
     category: "components",
     previewScale: 1,
+    npmDependencies: ["motion"],
   },
   {
     slug: "card-stack",
@@ -28,6 +64,7 @@ export const registry: RegistryEntry[] = [
     file: "registry/card-stack/card-stack.tsx",
     category: "components",
     previewScale: 0.88,
+    npmDependencies: ["motion", "@tabler/icons-react"],
   },
   {
     slug: "content-card",
@@ -36,6 +73,7 @@ export const registry: RegistryEntry[] = [
     file: "registry/content-card/content-card.tsx",
     category: "components",
     previewScale: 0.55,
+    npmDependencies: ["motion"],
   },
   {
     slug: "disclosure-card",
@@ -44,6 +82,7 @@ export const registry: RegistryEntry[] = [
     file: "registry/disclosure-card/disclosure-card.tsx",
     category: "components",
     previewScale: 0.65,
+    npmDependencies: ["motion"],
   },
   {
     slug: "sliding-number",
@@ -52,7 +91,8 @@ export const registry: RegistryEntry[] = [
     file: "registry/sliding-number/sliding-number.tsx",
     category: "components",
     previewScale: 1,
-    usage: `import { SlidingNumber } from "@/registry/sliding-number/sliding-number"
+    npmDependencies: ["motion"],
+    usage: `import { SlidingNumber } from "@/components/sliding-number"
 
 export default function Page() {
   return (
@@ -71,7 +111,8 @@ export default function Page() {
     file: "registry/concentric-progress/concentric-progress.tsx",
     category: "components",
     previewScale: 1,
-    usage: `import { ConcentricProgress } from "@/registry/concentric-progress/concentric-progress"
+    npmDependencies: ["motion"],
+    usage: `import { ConcentricProgress } from "@/components/concentric-progress"
 
 export default function Page() {
   return (
@@ -92,6 +133,7 @@ export default function Page() {
     file: "registry/dotted-background/dotted-background.tsx",
     category: "backgrounds",
     previewScale: 1,
+    npmDependencies: ["motion"],
   },
   {
     slug: "launch-page",
@@ -100,6 +142,8 @@ export default function Page() {
     file: "registry/launch-page/launch-page.tsx",
     category: "marketing",
     previewScale: 0.53,
+    npmDependencies: ["motion"],
+    registryDependencies: ["arrow-narrow-right-icon", "phone-volume"],
   },
   {
     slug: "integration",
@@ -108,6 +152,7 @@ export default function Page() {
     file: "registry/integration/integration.tsx",
     category: "marketing",
     previewScale: 0.47,
+    npmDependencies: ["motion"],
   },
   {
     slug: "pricing",
@@ -116,6 +161,7 @@ export default function Page() {
     file: "registry/pricing/pricing-01.tsx",
     category: "marketing",
     previewScale: 0.31,
+    npmDependencies: ["motion", "lucide-react"],
   },
   {
     slug: "dashboard-cards",
@@ -126,6 +172,7 @@ export default function Page() {
     previewScale: 0.55,
     previewHeight: 824,
     previewPadding: 32,
+    npmDependencies: ["motion", "lucide-react"],
   },
   {
     slug: "progress-row",
@@ -134,7 +181,8 @@ export default function Page() {
     file: "registry/progress-row/progress-row.tsx",
     category: "dashboard",
     previewScale: 1,
-    usage: `import ProgressRow from "@/registry/progress-row/progress-row"
+    npmDependencies: ["motion"],
+    usage: `import ProgressRow from "@/components/progress-row"
 
 export default function Page() {
   return (
