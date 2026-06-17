@@ -1,0 +1,42 @@
+components/concentric-progress.tsx
+  s_9a2ca37ae0f025::t_facfb4e66dd71e 1-2
+app/components/page.tsx
+  s_9a2ca37ae0f025::t_09275db047a037 77
+  s_9a2ca37ae0f025::t_5a430b26d4033e 21,24
+registry/index.ts
+  s_9a2ca37ae0f025::t_6c52693bdc6d50 113
+  s_9a2ca37ae0f025::t_61612127078917 114
+  s_9a2ca37ae0f025::t_4f89cb55cd7900 145
+  s_9a2ca37ae0f025::t_64de0b8f902e8e 132-133
+registry/dashboard-cards/dashboard-cards.tsx
+  s_9a2ca37ae0f025::t_390c0167e24736 5-6
+app/components/layout.tsx
+  s_9a2ca37ae0f025::t_f7da74e4922099 7
+registry/integration/integration.tsx
+  s_9a2ca37ae0f025::t_fe06de1f9c212c 4-24
+registry/launch-page/launch-page.tsx
+  s_9a2ca37ae0f025::t_e469bcceb5e899 3,5,28-29,54-55,57-58
+components/sliding-number.tsx
+  s_9a2ca37ae0f025::t_a231eb6c2a86de 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "62d9df0e48f33a50811ed4b7d82f51501f5bf570",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_9a2ca37ae0f025": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b888f657-6694-424c-86fc-5902b4790e78",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
