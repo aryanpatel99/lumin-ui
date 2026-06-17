@@ -9,6 +9,9 @@ import {
   type SpringOptions,
   type HTMLMotionProps,
 } from "motion/react"
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)) }
 
 // --- Roller: animates a single digit column ---
 
@@ -29,20 +32,9 @@ function SlidingNumberRoller({ prevValue, value, place, transition }: RollerProp
   }, [targetNumber, animatedValue])
 
   return (
-    <span
-      style={{
-        position: "relative",
-        display: "inline-block",
-        width: "1ch",
-        height: "1em",
-        overflow: "hidden",
-        lineHeight: 1,
-        verticalAlign: "baseline",
-        fontVariantNumeric: "tabular-nums",
-      }}
-    >
+    <span className="relative inline-block w-[1ch] h-[1em] overflow-hidden leading-none align-baseline tabular-nums">
       {/* invisible spacer keeps the baseline correct */}
-      <span style={{ visibility: "hidden" }}>0</span>
+      <span className="invisible">0</span>
       {Array.from({ length: 10 }, (_, i) => (
         <SlidingNumberDisplay
           key={i}
@@ -73,14 +65,8 @@ function SlidingNumberDisplay({ motionValue, number }: DisplayProps) {
 
   return (
     <motion.span
-      style={{
-        y,
-        position: "absolute",
-        inset: 0,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      className="absolute inset-0 flex items-center justify-center"
+      style={{ y }}
     >
       {number}
     </motion.span>
@@ -98,6 +84,7 @@ export type SlidingNumberProps = Omit<HTMLMotionProps<"span">, "children"> & {
 }
 
 export function SlidingNumber({
+  className,
   number,
   decimalSeparator = ".",
   decimalPlaces = 0,
@@ -127,10 +114,10 @@ export function SlidingNumber({
 
   return (
     <motion.span
-      style={{ display: "inline-flex", alignItems: "center" }}
+      className={cn("inline-flex items-center", className)}
       {...props}
     >
-      {number < 0 && <span style={{ marginRight: "0.1em" }}>-</span>}
+      {number < 0 && <span className="mr-[0.1em]">-</span>}
 
       {intPlaces.map((place, idx) => {
         const digitsToRight = intLength - idx - 1

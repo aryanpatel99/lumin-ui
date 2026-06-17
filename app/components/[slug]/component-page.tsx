@@ -13,13 +13,34 @@ interface Props {
   slug: string
   name: string
   rawCode: string
+  rawUsage: string
   highlightedCode: string
   highlightedUsage: string
+  previewHeight?: number
+  previewPadding?: number
+  installCmd: string
 }
 
-const PREVIEW_HEIGHT = 600
+function CopyInstallButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false)
+  return (
+    <button
+      onClick={async () => {
+        await navigator.clipboard.writeText(text)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      }}
+      className="shrink-0 text-neutral-400 hover:text-neutral-100 transition-colors"
+    >
+      {copied ? <Check size={14} /> : <Copy size={14} />}
+    </button>
+  )
+}
 
-export default function ComponentPage({ slug, name, rawCode, highlightedCode, highlightedUsage }: Props) {
+const DEFAULT_PREVIEW_HEIGHT = 600
+
+export default function ComponentPage({ slug, name, rawCode, rawUsage, highlightedCode, highlightedUsage, previewHeight, previewPadding, installCmd }: Props) {
+  const PREVIEW_HEIGHT = previewHeight ?? DEFAULT_PREVIEW_HEIGHT
   const [tab, setTab] = useState<Tab>("preview")
   const [copied, setCopied] = useState(false)
   const [isDark] = useState(false)
@@ -27,10 +48,7 @@ export default function ComponentPage({ slug, name, rawCode, highlightedCode, hi
   const Component = clientComponents[slug]
 
   const handleCopy = async () => {
-    const text = tab === "usage"
-      ? `import ${name.replace(/\s/g, "")} from "@/registry/${slug}/${slug}"\n\nexport default function Page() {\n  return <${name.replace(/\s/g, "")} />\n}`
-      : rawCode
-    await navigator.clipboard.writeText(text)
+    await navigator.clipboard.writeText(tab === "usage" ? rawUsage : rawCode)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -40,6 +58,12 @@ export default function ComponentPage({ slug, name, rawCode, highlightedCode, hi
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold tracking-tight">{name}</h1>
         <ModeToggle />
+      </div>
+
+      {/* Install command */}
+      <div className="flex items-center justify-between gap-3 mb-4 px-4 py-2.5 rounded-lg bg-neutral-950 dark:bg-neutral-900 border border-neutral-800 font-mono text-sm">
+        <span className="text-neutral-300 truncate">{installCmd}</span>
+        <CopyInstallButton text={installCmd} />
       </div>
 
       {/* Tab bar */}
@@ -67,7 +91,7 @@ export default function ComponentPage({ slug, name, rawCode, highlightedCode, hi
         {tab === "preview" && (
           <div className={isDark ? "dark" : ""}>
             <div
-              className="bg-neutral-50 dark:bg-neutral-900 relative overflow-auto"
+              className="bg-background relative overflow-auto"
               style={{ height: PREVIEW_HEIGHT }}
             >
               <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5">
@@ -81,7 +105,7 @@ export default function ComponentPage({ slug, name, rawCode, highlightedCode, hi
                 </Link>
               </div>
               {/* Wrapper fills the container — components using h-full get PREVIEW_HEIGHT */}
-              <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center" style={previewPadding ? { padding: previewPadding } : undefined}>
                 {Component && <Component />}
               </div>
             </div>
