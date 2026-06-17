@@ -2,8 +2,8 @@
 import { cn } from '@/lib/utils'
 import { ArrowUpRight, ChevronDown } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { SlidingNumber } from '../sliding-number/sliding-number'
-import ConcentricProgressCard, { ConcentricProgress } from '../concentric-progress/concentric-progress'
+import { SlidingNumber } from '@/components/sliding-number'
+import ConcentricProgressCard, { ConcentricProgress } from '@/components/concentric-progress'
 import { motion } from 'motion/react'
 
 // --- MAIN GRID CONTAINER ---

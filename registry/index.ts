@@ -13,45 +13,9 @@ export interface RegistryEntry {
   usage?: string
   npmDependencies: string[]
   registryDependencies?: string[]
-  hidden?: boolean
 }
 
 export const registry: RegistryEntry[] = [
-  {
-    slug: "animated-icon-types",
-    name: "Animated Icon Types",
-    exportName: "AnimatedIconHandle",
-    file: "components/ui/types.ts",
-    installPath: "components/ui/types.ts",
-    category: "components",
-    previewScale: 1,
-    npmDependencies: [],
-    hidden: true,
-  },
-  {
-    slug: "arrow-narrow-right-icon",
-    name: "Arrow Narrow Right Icon",
-    exportName: "ArrowNarrowRightIcon",
-    file: "components/ui/arrow-narrow-right-icon.tsx",
-    installPath: "components/ui/arrow-narrow-right-icon.tsx",
-    category: "components",
-    previewScale: 1,
-    npmDependencies: ["motion"],
-    registryDependencies: ["animated-icon-types"],
-    hidden: true,
-  },
-  {
-    slug: "phone-volume",
-    name: "Phone Volume Icon",
-    exportName: "PhoneVolume",
-    file: "components/ui/phone-volume.tsx",
-    installPath: "components/ui/phone-volume.tsx",
-    category: "components",
-    previewScale: 1,
-    npmDependencies: ["motion"],
-    registryDependencies: ["animated-icon-types"],
-    hidden: true,
-  },
   {
     slug: "animated-button",
     name: "Animated Button",
@@ -146,8 +110,8 @@ export default function Page() {
     file: "registry/launch-page/launch-page.tsx",
     category: "marketing",
     previewScale: 0.53,
-    npmDependencies: ["motion"],
-    registryDependencies: ["arrow-narrow-right-icon", "phone-volume"],
+    npmDependencies: ["motion", "@tabler/icons-react"],
+    registryDependencies: ["button"],
   },
   {
     slug: "integration",
@@ -165,7 +129,8 @@ export default function Page() {
     file: "registry/pricing/pricing-01.tsx",
     category: "marketing",
     previewScale: 0.31,
-    npmDependencies: ["motion", "lucide-react"],
+    npmDependencies: ["lucide-react"],
+    registryDependencies: ["sliding-number"],
   },
   {
     slug: "dashboard-cards",
@@ -177,6 +142,7 @@ export default function Page() {
     previewHeight: 824,
     previewPadding: 32,
     npmDependencies: ["motion", "lucide-react"],
+    registryDependencies: ["sliding-number", "concentric-progress"],
   },
   {
     slug: "progress-row",

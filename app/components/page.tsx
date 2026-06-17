@@ -18,11 +18,10 @@ type Filter = "all" | RegistryCategory
 export default function ComponentsIndex() {
   const [active, setActive] = useState<Filter>("all")
 
-  const visible = registry.filter((e) => !e.hidden)
-  const total = visible.length
+  const total = registry.length
 
   const counts = CATEGORY_ORDER.reduce<Record<RegistryCategory, number>>((acc, cat) => {
-    acc[cat] = visible.filter((e) => e.category === cat).length
+    acc[cat] = registry.filter((e) => e.category === cat).length
     return acc
   }, {} as Record<RegistryCategory, number>)
 
@@ -75,7 +74,7 @@ export default function ComponentsIndex() {
       {/* Category groups */}
       <div className="space-y-10">
         {visibleCategories.map((cat) => {
-          const entries = visible.filter((e) => e.category === cat)
+          const entries = registry.filter((e) => e.category === cat)
           return (
             <div key={cat}>
               <div className="flex items-center gap-3 mb-4">

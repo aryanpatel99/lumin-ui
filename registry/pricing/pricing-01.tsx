@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Check } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { SlidingNumber } from '@/registry/sliding-number/sliding-number'
+import { SlidingNumber } from '@/components/sliding-number'
 
 // --- Types ---
 interface CardData {

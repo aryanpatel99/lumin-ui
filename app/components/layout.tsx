@@ -4,7 +4,7 @@ import { registry } from "@/registry"
 import SidebarNav from "./sidebar-nav"
 
 export default function ComponentsLayout({ children }: { children: React.ReactNode }) {
-  const entries = registry.filter((e) => !e.hidden).map((e) => ({ slug: e.slug, name: e.name }))
+  const entries = registry.map((e) => ({ slug: e.slug, name: e.name }))
 
   return (
     <div className="flex h-screen bg-background text-foreground overflow-hidden">
