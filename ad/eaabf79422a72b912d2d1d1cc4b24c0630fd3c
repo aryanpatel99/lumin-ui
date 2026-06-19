@@ -1,0 +1,25 @@
+app/r/[slug]/route.ts
+  s_9a2ca37ae0f025::t_bd7968a4524d82 2
+  s_9a2ca37ae0f025::t_8a3c1741dc4d15 18,21-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "adeaabf79422a72b912d2d1d1cc4b24c0630fd3c",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_9a2ca37ae0f025": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b888f657-6694-424c-86fc-5902b4790e78",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
