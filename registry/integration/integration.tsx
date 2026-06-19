@@ -28,10 +28,9 @@ import { motion } from 'motion/react'
 export default function Integration() {
   return (
     <div
-      style={{
-        transform: "rotateY(20deg) rotateX(20deg)"
-      }}
+      style={{ transform: "rotateY(20deg) rotateX(20deg)" }}
       className='relative flex justify-center items-center w-full h-full'>
+      <style>{`@keyframes orbit{from{transform:rotate(0deg) translate(var(--translate-position)) rotate(0deg)}to{transform:rotate(360deg) translate(var(--translate-position)) rotate(-360deg)}}`}</style>
 
       <Circle delay={0.6} className=" shadow-sm border-neutral-200/50 dark:border-neutral-700 size-120 z-6 bg-neutral-100/20 dark:bg-neutral-800/20" />
       <Circle delay={0.45} className=" shadow-sm border-neutral-200/50 dark:border-neutral-700 size-100 z-7 bg-neutral-100/30 dark:bg-neutral-800/40" />
@@ -84,11 +83,16 @@ export const Circle = ({ className, children, delay = 0 }: { className?: string,
 // 🔹 Refactored OrbitCircle to handle animation separately
 export const OrbitCircle = ({ className, children, delay = 0 }: { className?: string, children?: React.ReactNode, delay?: number }) => {
   return (
-    <div className={cn(
-      "absolute flex justify-center items-center rounded-full [--translate-position:120px] [--orbit-duration:6s]",
-      "animate-orbit [animation-delay:var(--orbit-start-delay)]",
-      className
-    )}>
+    <div
+      className={cn(
+        "absolute flex justify-center items-center rounded-full [--translate-position:120px] [--orbit-duration:6s]",
+        className
+      )}
+      style={{
+        animation: "orbit var(--orbit-duration, 6s) linear infinite",
+        animationDelay: "var(--orbit-start-delay, 0s)",
+      }}
+    >
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
