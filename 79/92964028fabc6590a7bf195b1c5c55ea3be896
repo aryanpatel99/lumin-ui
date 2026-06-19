@@ -1,0 +1,27 @@
+registry/integration/integration.tsx
+  s_9a2ca37ae0f025::t_6841eec9b1a97d 86-95
+  s_9a2ca37ae0f025::t_c5e02e91dc2e0b 31,33
+app/scratch/page.tsx
+  h_ccbfe03d15f891 3,8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "7992964028fabc6590a7bf195b1c5c55ea3be896",
+  "prompts": {},
+  "humans": {
+    "h_ccbfe03d15f891": {
+      "author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_9a2ca37ae0f025": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b888f657-6694-424c-86fc-5902b4790e78",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Aryan Patel <aryanpatel6215@gmail.com>"
+    }
+  }
+}
