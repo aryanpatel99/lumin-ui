@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { getEntry } from "@/registry"
+import { registry, getEntry } from "@/registry"
 import fs from "fs"
 import path from "path"
 
@@ -15,9 +15,12 @@ export async function GET(req: Request, { params }: { params: Promise<{ slug: st
 
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? new URL(req.url).origin
 
+  const ourSlugs = new Set(registry.map((e) => e.slug))
   const registryDeps = [
     "utils",
-    ...(entry.registryDependencies ?? []).map((dep) => `${baseUrl}/r/${dep}`),
+    ...(entry.registryDependencies ?? []).map((dep) =>
+      ourSlugs.has(dep) ? `${baseUrl}/r/${dep}` : dep
+    ),
   ]
 
   return NextResponse.json({
